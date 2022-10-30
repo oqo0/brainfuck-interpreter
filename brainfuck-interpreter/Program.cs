@@ -69,11 +69,11 @@ namespace BrainfuckInterpreter
 
                             while (brackets > 0)
                             {
-                                i++;
+                                command = commandBuffer[++i];
 
-                                if (commandBuffer[i] == '[')
+                                if (command == '[')
                                     brackets++;
-                                else if (commandBuffer[i] == ']')
+                                else if (command == ']')
                                     brackets--;
                             }
                         }
@@ -85,11 +85,11 @@ namespace BrainfuckInterpreter
 
                         while (brackets > 0)
                         {
-                            i--;
+                            command = commandBuffer[--i];
 
-                            if (commandBuffer[i] == '[')
+                            if (command == '[')
                                 brackets--;
-                            else if (commandBuffer[i] == ']')
+                            else if (command == ']')
                                 brackets++;
                         }
                         i--;
