@@ -16,18 +16,18 @@ namespace BrainfuckInterpreter
             {
                 switch (command)
                 {
-                    case (','):
+                    case ',':
                     {
                         string input = Console.ReadLine();
                         memory[pointer] = Convert.ToInt32(pointer);
                         break;
                     }
-                    case ('.'):
+                    case '.':
                     {
-                        Console.WriteLine(memory[pointer]);
+                        Console.WriteLine((char)memory[pointer]);
                         break;
                     }
-                    case ('>'):
+                    case '>':
                     {
                         if (pointer == memory.Length - 1)
                         {
@@ -38,7 +38,7 @@ namespace BrainfuckInterpreter
                         pointer++;
                         break;
                     }
-                    case ('<'):
+                    case '<':
                     {
                         if (pointer == 0)
                         {
@@ -49,24 +49,26 @@ namespace BrainfuckInterpreter
                         pointer--;
                         break;
                     }
-                    case ('+'):
+                    case '+':
                     {
                         memory[pointer]++;
                         break;
                     }
-                    case ('-'):
+                    case '-':
                     {
                         memory[pointer]--;
                         break;
                     }
-                    case ('['):
+                    case '[':
                     {
                         break;
                     }
-                    case (']'):
+                    case ']':
                     {
                         break;
                     }
+                    default:
+                        throw new InvalidOperationException();
                 }
             }
 
