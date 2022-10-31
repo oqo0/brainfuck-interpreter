@@ -102,8 +102,6 @@ namespace BrainfuckInterpreter
                         i--;
                         break;
                     }
-                    default:
-                        throw new InvalidOperationException();
                 }
             }
             
