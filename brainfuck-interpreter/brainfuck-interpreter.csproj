@@ -1,6 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+        <PublishSingleFile>true</PublishSingleFile>
         <OutputType>Exe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>brainfuck_interpreter</RootNamespace>

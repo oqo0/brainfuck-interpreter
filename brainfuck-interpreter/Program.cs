@@ -6,7 +6,7 @@
         {
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
-                
+            
             try
             {
                 string code = File.ReadAllText(args[0]);
