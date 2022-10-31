@@ -26,7 +26,14 @@ namespace BrainfuckInterpreter
                     }
                     case '.':
                     {
-                        Console.Write((char)memory[pointer]);
+                        char output;
+
+                        if (memory[pointer] <= 10)
+                            output = (char)(memory[pointer] + 48);
+                        else
+                            output = (char)memory[pointer];
+                        
+                        Console.Write(output);
                         break;
                     }
                     case '>':
@@ -65,7 +72,7 @@ namespace BrainfuckInterpreter
                     {
                         if (memory[pointer] == 0)
                         {
-                            int brackets = 1;
+                            var brackets = 1;
 
                             while (brackets > 0)
                             {
@@ -81,7 +88,7 @@ namespace BrainfuckInterpreter
                     }
                     case ']':
                     {
-                        int brackets = 1;
+                        var brackets = 1;
 
                         while (brackets > 0)
                         {
