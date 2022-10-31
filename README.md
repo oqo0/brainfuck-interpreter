@@ -3,6 +3,18 @@
 Today, in order to practice my C# programming, I wrote the following C# Console application (using .NET 6.0).
 Brainfuck is an esoteric programming language. It’s designed to be confusing, hence the name. The language only consists of 8 characters: `> < + - . , [ ]`.  
 
+## Usage
+Run Brain Fuck code from file:
+```
+./brainfuck-interpreter <file name \ path>
+```
+
+## Compile project
+Change project configuration file `brainfuck-interpreter.csproj` for your needs. 
+```
+dotnet publish -r linux-x64 -p:PublishSingleFile=true --self-contained false
+```
+
 ## Examples
 
 ##### Hello World
